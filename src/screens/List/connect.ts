@@ -41,8 +41,6 @@ const useConnect = () => {
     }, 500);
   };
 
-  console.log('SEarch text: ', searchText);
-
   return {
     dataList,
     handlePressCard,

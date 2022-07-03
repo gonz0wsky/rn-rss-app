@@ -4,13 +4,14 @@ import {useMemo} from 'react';
 import {useQuery} from 'react-query';
 import {IFeedListResponse} from './interfaces';
 
-export const useFeedList = () => {
+export const useFeedList = (enabled = true) => {
   const queryFn = () =>
     getRequest<IFeedListResponse>({path: 'news?category=technology'});
 
   const {data, isLoading, error} = useQuery({
     queryKey: 'feedList',
     queryFn,
+    enabled,
   });
 
   const feed = data?.data?.data;
