@@ -3,8 +3,11 @@ import {Dimensions, Platform} from 'react-native';
 import {ThemeContext} from 'styled-components/native';
 
 export const colors = {
-  black: '#000000',
+  black: '#222831',
+  gray: '#393E46',
+  softGray: '#EEEEEE',
   white: '#FFFFFF',
+  yellow: '#FFD369',
 };
 
 const {width, height} = Dimensions.get('window');

@@ -14,7 +14,17 @@ export const useFeedList = () => {
   });
 
   const feed = data?.data?.data;
-  const list = useMemo(() => feed?.map(normalizeFeedItem) ?? [], [feed]);
+  const normalizedFeed = useMemo(
+    () => feed?.map(normalizeFeedItem) ?? [],
+    [feed],
+  );
+  const list = useMemo(
+    () =>
+      normalizedFeed.sort(
+        (a, b) => new Date(b?.date).getTime() - new Date(a?.date).getTime(),
+      ),
+    [normalizedFeed],
+  );
 
   return {list, error, isLoading};
 };
