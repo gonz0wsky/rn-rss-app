@@ -7,10 +7,6 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.black};
 `;
 
-export const SafeArea = styled.SafeAreaView`
-  flex: 1;
-`;
-
 export const FeedList = styled(FlatList).attrs({
   scrollEventThrottle: 16,
   indicatorStyle: 'white',
@@ -33,5 +29,4 @@ export const Separator = styled.View`
 export const TextInput = styled.TextInput`
   background-color: ${({theme}) => theme.colors.white};
   margin: 16px;
-  height: 24px;
 `;

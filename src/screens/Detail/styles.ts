@@ -6,10 +6,6 @@ export const Container = styled.View`
   background-color: ${({theme}) => theme.colors.black};
 `;
 
-export const SafeArea = styled.SafeAreaView`
-  flex: 1;
-`;
-
 export const Scroll = styled.ScrollView.attrs({
   contentContainerStyle: {
     paddingHorizontal: 16,

@@ -8,3 +8,7 @@ export type Props = {
   style?: StyleProp<ViewStyle>;
   title: string;
 };
+
+export type ContainerProps = {
+  safeTop: number;
+};

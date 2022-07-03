@@ -2,14 +2,7 @@ import {Header} from 'components';
 import React, {FC, useCallback} from 'react';
 import {formatDate} from 'utils';
 import useConnect from './connect';
-import {
-  Container,
-  FeedItem,
-  FeedList,
-  SafeArea,
-  Separator,
-  TextInput,
-} from './styles';
+import {Container, FeedItem, FeedList, Separator, TextInput} from './styles';
 
 export const List: FC = () => {
   const {
@@ -36,19 +29,17 @@ export const List: FC = () => {
 
   return (
     <Container>
-      <SafeArea>
-        <Header
-          title="List"
-          rightTitle="Search"
-          onPressRightButton={handlePresSearch}
-        />
-        {searchVisible && <TextInput onChangeText={handleSearch} />}
-        <FeedList
-          data={dataList}
-          renderItem={renderItem}
-          ItemSeparatorComponent={Separator}
-        />
-      </SafeArea>
+      <Header
+        title="List"
+        rightTitle="Search"
+        onPressRightButton={handlePresSearch}
+      />
+      {searchVisible && <TextInput onChangeText={handleSearch} />}
+      <FeedList
+        data={dataList}
+        renderItem={renderItem}
+        ItemSeparatorComponent={Separator}
+      />
     </Container>
   );
 };
