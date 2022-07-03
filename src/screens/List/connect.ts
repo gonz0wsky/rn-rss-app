@@ -5,7 +5,7 @@ import {Props} from './types';
 
 const useConnect = () => {
   const {navigate} = useNavigation<Props['navigation']>();
-  const {list} = useFeedList();
+  const {list, isFetching} = useFeedList();
 
   const [searchVisible, setSearchVisible] = useState(false);
   const [searchText, setSearchText] = useState('');
@@ -45,8 +45,9 @@ const useConnect = () => {
     dataList,
     handlePressCard,
     handlePresSearch,
-    searchVisible,
     handleSearch,
+    isFetching,
+    searchVisible,
   };
 };
 

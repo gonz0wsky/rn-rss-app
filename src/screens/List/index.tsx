@@ -2,7 +2,15 @@ import {Header} from 'components';
 import React, {FC, useCallback} from 'react';
 import {formatDate} from 'utils';
 import useConnect from './connect';
-import {Container, FeedItem, FeedList, Separator, TextInput} from './styles';
+import {
+  Container,
+  FeedItem,
+  FeedList,
+  LoadingContainer,
+  LoadingText,
+  Separator,
+  TextInput,
+} from './styles';
 
 export const List: FC = () => {
   const {
@@ -10,6 +18,7 @@ export const List: FC = () => {
     handlePressCard,
     handlePresSearch,
     handleSearch,
+    isFetching,
     searchVisible,
   } = useConnect();
 
@@ -40,6 +49,11 @@ export const List: FC = () => {
         renderItem={renderItem}
         ItemSeparatorComponent={Separator}
       />
+      {isFetching && (
+        <LoadingContainer>
+          <LoadingText>Loading...</LoadingText>
+        </LoadingContainer>
+      )}
     </Container>
   );
 };

@@ -8,7 +8,7 @@ export const useFeedList = (enabled = true) => {
   const queryFn = () =>
     getRequest<IFeedListResponse>({path: 'news?category=technology'});
 
-  const {data, isLoading, error} = useQuery({
+  const {data, error, isFetching} = useQuery({
     queryKey: 'feedList',
     queryFn,
     enabled,
@@ -27,5 +27,5 @@ export const useFeedList = (enabled = true) => {
     [normalizedFeed],
   );
 
-  return {list, error, isLoading};
+  return {list, error, isFetching};
 };

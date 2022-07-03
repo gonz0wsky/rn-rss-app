@@ -7,6 +7,16 @@ export const Container = styled.View`
   flex: 1;
 `;
 
+export const LoadingContainer = styled.View`
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+`;
+
 export const FeedList = styled(FlatList).attrs({
   indicatorStyle: 'white',
   scrollEventThrottle: 16,
@@ -18,8 +28,8 @@ export const FeedList = styled(FlatList).attrs({
 
 export const FeedItem = styled(Card)``;
 
-export const Text = styled.Text`
-  color: ${({theme}) => theme.colors.black};
+export const LoadingText = styled.Text`
+  color: ${({theme}) => theme.colors.white};
 `;
 
 export const Separator = styled.View`
