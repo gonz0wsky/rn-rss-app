@@ -2,8 +2,8 @@ import FastImage from 'react-native-fast-image';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  flex: 1;
   background-color: ${({theme}) => theme.colors.black};
+  flex: 1;
 `;
 
 export const Scroll = styled.ScrollView.attrs({
@@ -13,18 +13,18 @@ export const Scroll = styled.ScrollView.attrs({
 })``;
 
 export const Image = styled(FastImage)`
-  width: 100%;
   height: 200px;
   margin-top: 20px;
+  width: 100%;
 `;
 
 export const Title = styled.Text`
+  color: ${({theme}) => theme.colors.white};
   font-size: 24px;
   margin-top: 20px;
-  color: ${({theme}) => theme.colors.white};
 `;
 
 export const Description = styled.Text`
-  margin-top: 16px;
   color: ${({theme}) => theme.colors.white};
+  margin-top: 16px;
 `;

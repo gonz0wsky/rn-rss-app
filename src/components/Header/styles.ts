@@ -3,21 +3,21 @@ import ButtonBase from './Button';
 import {ContainerProps} from './types';
 
 export const Container = styled.View<ContainerProps>`
+  align-items: center;
   background-color: ${({theme}) => theme.colors.gray};
   flex-direction: row;
-  align-items: center;
-  width: 100%;
   padding-top: ${({safeTop}) => safeTop}px;
+  width: 100%;
 `;
 
 export const Title = styled.Text`
-  position: absolute;
-  text-align: center;
-  left: 0;
-  right: 0;
   bottom: 0;
-  margin-bottom: 8px;
   color: ${({theme}) => theme.colors.yellow};
+  left: 0;
+  margin-bottom: 8px;
+  position: absolute;
+  right: 0;
+  text-align: center;
 `;
 
 export const LeftButton = styled(ButtonBase)``;

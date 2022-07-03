@@ -3,13 +3,13 @@ import {FlatList} from 'react-native';
 import styled from 'styled-components/native';
 
 export const Container = styled.View`
-  flex: 1;
   background-color: ${({theme}) => theme.colors.black};
+  flex: 1;
 `;
 
 export const FeedList = styled(FlatList).attrs({
-  scrollEventThrottle: 16,
   indicatorStyle: 'white',
+  scrollEventThrottle: 16,
   contentContainerStyle: {
     paddingHorizontal: 16,
     paddingVertical: 16,
