@@ -16,7 +16,7 @@ export const List: FC = () => {
   const {
     dataList,
     handlePressCard,
-    handlePresSearch,
+    handlePressSearch,
     handleSearch,
     isFetching,
     searchVisible,
@@ -41,7 +41,7 @@ export const List: FC = () => {
       <Header
         title="List"
         rightTitle="Search"
-        onPressRightButton={handlePresSearch}
+        onPressRightButton={handlePressSearch}
       />
       {searchVisible && <TextInput onChangeText={handleSearch} />}
       <FeedList

@@ -27,7 +27,10 @@ const useConnect = () => {
     [navigate],
   );
 
-  const handlePresSearch = () => {
+  const handlePressSearch = () => {
+    if (searchVisible) {
+      setSearchText('');
+    }
     setSearchVisible(prev => !prev);
   };
 
@@ -44,7 +47,7 @@ const useConnect = () => {
   return {
     dataList,
     handlePressCard,
-    handlePresSearch,
+    handlePressSearch,
     handleSearch,
     isFetching,
     searchVisible,
