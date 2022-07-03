@@ -1,6 +1,6 @@
 import reactQueryClient from 'api/client';
 import React from 'react';
-import {Platform, StyleSheet, UIManager} from 'react-native';
+import {LogBox, Platform, StyleSheet, UIManager} from 'react-native';
 import {GestureHandlerRootView} from 'react-native-gesture-handler';
 import {QueryClientProvider} from 'react-query';
 import AppNavigator from 'navigator';
@@ -14,6 +14,10 @@ if (
 ) {
   UIManager.setLayoutAnimationEnabledExperimental(true);
 }
+
+LogBox.ignoreLogs([
+  "Seems like you're using an old API with gesture components, check out new Gestures system!",
+]);
 
 const App = () => (
   <QueryClientProvider client={reactQueryClient}>
