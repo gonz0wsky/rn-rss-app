@@ -1,10 +1,12 @@
+import reactQueryClient from 'api/client';
 import React, {FC} from 'react';
-import {Container, Text} from './styles';
+import {QueryClientProvider} from 'react-query';
+import List from 'screens/List';
 
 const Root: FC = () => (
-  <Container>
-    <Text>Hi!</Text>
-  </Container>
+  <QueryClientProvider client={reactQueryClient}>
+    <List />
+  </QueryClientProvider>
 );
 
 export default Root;
